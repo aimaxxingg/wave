@@ -6,7 +6,7 @@
     <title>Wave Foundation — Artist Management & Creative</title>
     <meta
       name="description"
-      content="Wave Foundation is a music management and creative company. We manage, build and grow artists — Pressa, Bundog, Nina Woods, Pouria K, Mersad and TYNN."
+      content="Wave Foundation is a music management and creative company. We manage, build and grow artists — Pressa, Bundog, Nina Woods, Pouria K and Mersad."
     />
     <meta name="theme-color" content="#0b0b0b" />
     <meta property="og:title" content="Wave Foundation" />
@@ -20,8 +20,8 @@
       rel="stylesheet"
     />
     <link rel="preload" as="image" href="media/video/reel-poster.jpg" />
-    <script type="module" crossorigin src="./assets/index-BEFMTq_H.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BSrYBHBA.css">
+    <script type="module" crossorigin src="./assets/index-DRvtG7kd.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-C-7v7R-q.css">
   </head>
   <body class="is-loading">
     <!-- Loader -->
@@ -52,20 +52,18 @@
       </a>
       <nav class="nav__links" aria-label="Main">
         <a href="#roster" data-scramble>Roster</a>
-        <a href="#about" data-scramble>About</a>
+        <a href="#work" data-scramble>Releases</a>
         <a href="#services" data-scramble>What we do</a>
-        <a href="#work" data-scramble>Work</a>
         <a href="#contact" data-scramble>Contact</a>
       </nav>
       <button class="nav__menu mono" aria-expanded="false" aria-controls="menu">Menu</button>
     </header>
 
-    <div class="menu" id="menu" hidden>
+    <div class="menu" id="menu" data-lenis-prevent hidden>
       <nav aria-label="Mobile">
         <a href="#roster">Roster</a>
-        <a href="#about">About</a>
+        <a href="#work">Releases</a>
         <a href="#services">What we do</a>
-        <a href="#work">Work</a>
         <a href="#contact">Contact</a>
       </nav>
       <a class="menu__mail mono" href="mailto:Info@wavefoundation.co">Info@wavefoundation.co</a>
@@ -82,13 +80,7 @@
           </h1>
         </div>
         <div class="hero__hud mono">
-          <button class="np" type="button" aria-live="polite">
-            <span class="np__label">Now playing</span>
-            <span class="np__artist">Pressa</span>
-            <span class="np__song">Tough Decisions</span>
-          </button>
           <span class="hud__scroll">Scroll</span>
-          <span class="hud__tc" aria-hidden="true">00:00:00:00</span>
         </div>
       </section>
 
@@ -97,37 +89,31 @@
         <div class="section-head mono">
           <span>(01)</span>
           <h2 id="roster-title">The roster</h2>
-          <span class="roster__count">06 artists</span>
+          <span class="roster__count">05 artists</span>
         </div>
         <ol class="roster__list"></ol>
         <p class="roster__hint mono">Hover a name to watch. Click to meet them.</p>
       </section>
 
-      <!-- ABOUT -->
-      <section class="about" id="about" aria-labelledby="about-title">
+      <!-- RELEASES -->
+      <section class="work" id="work" aria-labelledby="work-title">
         <div class="section-head mono">
           <span>(02)</span>
-          <h2 id="about-title">About</h2>
-          <span>Since 2021</span>
+          <h2 id="work-title">Releases</h2>
+          <span class="work__count"></span>
         </div>
-        <p class="about__statement" data-words>
-          Every wave needs something solid behind it. <em>We are the foundation.</em>
-        </p>
-        <div class="about__body">
-          <p>
-            Wave Foundation is a music management and creative company. We sit where music, business and creativity
-            meet.
-          </p>
-          <p>
-            We work hands-on with every artist. No templates — each plan is built around who they are and where they
-            want to go.
-          </p>
+        <div class="flow" role="region" aria-roledescription="carousel" aria-label="Cover art" tabindex="0" data-cursor="Drag">
+          <div class="flow__stage"></div>
         </div>
-        <dl class="facts">
-          <div class="fact"><dt class="mono">Founded</dt><dd data-count="2021">2021</dd><span class="fact__note mono">Built to last</span></div>
-          <div class="fact"><dt class="mono">Artists</dt><dd data-count="6">6</dd><span class="fact__note mono">Sonically diverse</span></div>
-          <div class="fact"><dt class="mono">Scenes</dt><dd data-count="3">3</dd><span class="fact__note mono">Toronto · New York · Persian</span></div>
-        </dl>
+        <div class="flow__ui">
+          <button class="flow__btn" type="button" data-dir="-1" aria-label="Previous cover">←</button>
+          <a class="flow__caption" href="#/artist/pressa" aria-live="polite">
+            <span class="flow__idx mono"></span>
+            <span class="flow__artist"></span>
+            <span class="flow__go mono">View artist →</span>
+          </a>
+          <button class="flow__btn" type="button" data-dir="1" aria-label="Next cover">→</button>
+        </div>
       </section>
 
       <!-- SERVICES -->
@@ -139,36 +125,43 @@
         </div>
         <div class="services__grid">
           <div class="services__sticky" aria-hidden="true">
-            <div class="services__num"><span class="services__digit">01</span></div>
             <img class="services__ring" src="media/brand/ring.webp" alt="" width="900" height="870" />
           </div>
           <ol class="services__list"></ol>
         </div>
       </section>
 
-      <!-- WORK -->
-      <section class="work" id="work" aria-labelledby="work-title">
-        <div class="section-head mono">
-          <span>(04)</span>
-          <h2 id="work-title">The work</h2>
-          <span>Selected releases</span>
-        </div>
-        <div class="work__rows"></div>
-      </section>
-
       <!-- CONTACT -->
       <footer class="contact" id="contact" aria-labelledby="contact-title">
+        <canvas class="contact__field" aria-hidden="true"></canvas>
         <div class="section-head mono">
-          <span>(05)</span>
+          <span>(04)</span>
           <h2 id="contact-title">Contact</h2>
-          <span class="clocks"></span>
+          <span>Say hello</span>
         </div>
-        <p class="contact__lead">Got a wave?<br />Let’s build what’s behind it.</p>
-        <a class="contact__mail" href="mailto:Info@wavefoundation.co" data-cursor="Email us">
-          <span class="contact__mail-text">Info@wavefoundation.co</span>
-          <span class="contact__mail-arrow" aria-hidden="true">↗</span>
-        </a>
-        <ul class="contact__socials mono"></ul>
+        <p class="contact__lead">Got a wave?<br /><span class="contact__lead-2">Let’s build what’s behind it.</span></p>
+        <p class="contact__hint mono">Move your cursor — make some waves.</p>
+        <div class="contact__mailbox">
+          <a class="contact__mail" href="mailto:Info@wavefoundation.co" data-cursor="Email us">
+            <span class="contact__mail-text">Info@wavefoundation.co</span>
+            <span class="contact__mail-arrow" aria-hidden="true">↗</span>
+          </a>
+          <button class="contact__copy mono" type="button">Copy email</button>
+        </div>
+        <div class="contact__grid">
+          <div class="contact__cell">
+            <p class="mono">Write to us</p>
+            <p>Artists, labels and brands. Tell us what you’re building.</p>
+          </div>
+          <div class="contact__cell">
+            <p class="mono">Follow us</p>
+            <ul class="contact__socials"></ul>
+          </div>
+          <div class="contact__cell">
+            <p class="mono">Local time</p>
+            <ul class="clocks"></ul>
+          </div>
+        </div>
         <img class="contact__wordmark" src="media/brand/wordmark-chrome.webp" alt="Wave Foundation" width="1600" height="498" loading="lazy" />
         <div class="contact__legal mono">
           <span>© <span class="year">2026</span> Wave Foundation</span>
@@ -178,7 +171,8 @@
     </main>
 
     <!-- Artist page (route: #/artist/slug) -->
-    <div class="artist" role="dialog" aria-modal="true" aria-label="Artist" hidden></div>
-
+    <!-- data-lenis-prevent: the page smooth-scroll is paused while this is open and must not swallow its scroll -->
+    <div class="artist" role="dialog" aria-modal="true" aria-label="Artist" data-lenis-prevent hidden></div>
+
   </body>
 </html>
