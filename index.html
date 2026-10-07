@@ -20,8 +20,8 @@
       rel="stylesheet"
     />
     <link rel="preload" as="image" href="media/video/reel-poster.jpg" />
-    <script type="module" crossorigin src="./assets/index-DRvtG7kd.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-C-7v7R-q.css">
+    <script type="module" crossorigin src="./assets/index-pegLTufI.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BWCkjd1s.css">
   </head>
   <body class="is-loading">
     <!-- Loader -->
@@ -100,19 +100,35 @@
         <div class="section-head mono">
           <span>(02)</span>
           <h2 id="work-title">Releases</h2>
-          <span class="work__count"></span>
+          <span class="work__count">Dig through the crate</span>
         </div>
-        <div class="flow" role="region" aria-roledescription="carousel" aria-label="Cover art" tabindex="0" data-cursor="Drag">
-          <div class="flow__stage"></div>
-        </div>
-        <div class="flow__ui">
-          <button class="flow__btn" type="button" data-dir="-1" aria-label="Previous cover">←</button>
-          <a class="flow__caption" href="#/artist/pressa" aria-live="polite">
-            <span class="flow__idx mono"></span>
-            <span class="flow__artist"></span>
-            <span class="flow__go mono">View artist →</span>
-          </a>
-          <button class="flow__btn" type="button" data-dir="1" aria-label="Next cover">→</button>
+        <div class="dig">
+          <span class="dig__probe" aria-hidden="true"></span>
+          <div
+            class="dig__stage"
+            tabindex="0"
+            role="group"
+            aria-roledescription="record crate and turntable"
+            aria-label="Record crate. Use the arrow keys to flip through, Enter to play."
+          >
+            <div class="dig__world">
+              <div class="dig__crate-g" data-cursor="Drag · Tap to play"></div>
+              <div class="dig__deck-g" data-cursor="Play / Pause"></div>
+            </div>
+          </div>
+          <div class="dig__hud">
+            <p class="dig__meta mono"><span class="dig__count">01 / 17</span><span class="dig__status">Drag the crate to dig</span></p>
+            <a class="dig__name" href="#/artist/pressa">Pressa</a>
+            <p class="dig__sub mono" aria-live="polite">Tough Decisions — preview</p>
+            <div class="dig__controls">
+              <button class="dig__btn" type="button" data-dir="-1" aria-label="Previous record"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+              <button class="dig__btn dig__btn--play" type="button" aria-label="Play">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path class="i-play" d="M8 5.5v13l11-6.5z" fill="currentColor"/><path class="i-pause" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg>
+              </button>
+              <button class="dig__btn" type="button" data-dir="1" aria-label="Next record"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+            </div>
+            <div class="dig__bar" aria-hidden="true"><span></span></div>
+          </div>
         </div>
       </section>
 
