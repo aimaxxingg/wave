@@ -19,9 +19,11 @@
       href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="preload" as="image" href="media/video/reel-poster.jpg" />
-    <script type="module" crossorigin src="./assets/index-pegLTufI.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BWCkjd1s.css">
+    <!-- only the poster this screen will use (phones get the 9:16 one) -->
+    <link rel="preload" as="image" href="media/video/reel-poster.webp" media="(min-aspect-ratio: 4/5)" />
+    <link rel="preload" as="image" href="media/video/reel-mobile-poster.webp" media="(max-aspect-ratio: 4/5)" />
+    <script type="module" crossorigin src="./assets/index-DX-r_6Va.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Clox4Zt_.css">
   </head>
   <body class="is-loading">
     <!-- Loader -->
@@ -38,7 +40,7 @@
 
     <!-- Persistent video stage behind hero + roster -->
     <div class="stage" aria-hidden="true">
-      <video class="stage__video stage__reel is-active" muted loop playsinline preload="auto" poster="media/video/reel-poster.jpg"></video>
+      <video class="stage__video stage__reel is-active" muted loop playsinline preload="auto"></video>
       <div class="stage__loops"></div>
       <div class="stage__shade"></div>
     </div>
@@ -104,6 +106,16 @@
         </div>
         <div class="dig">
           <span class="dig__probe" aria-hidden="true"></span>
+          <!-- room light: the current cover, blurred, tints the whole frame -->
+          <div class="dig__ambient" aria-hidden="true"><img alt="" /><img alt="" /></div>
+          <i class="dig__frame" aria-hidden="true"></i>
+          <div class="dig__head">
+            <h3 class="dig__title">Pull a record.<br /><span>Drop the needle.</span></h3>
+            <p class="dig__tag mono">
+              <span class="dig__onair"><i></i>On air</span>
+              <span>Side A · <span class="dig__total">17</span> records</span>
+            </p>
+          </div>
           <div
             class="dig__stage"
             tabindex="0"
@@ -117,7 +129,7 @@
             </div>
           </div>
           <div class="dig__hud">
-            <p class="dig__meta mono"><span class="dig__count">01 / 17</span><span class="dig__status">Drag the crate to dig</span></p>
+            <p class="dig__meta mono"><span class="dig__count">01 / 17</span><span class="dig__eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="dig__status">Drag the crate to dig</span></p>
             <a class="dig__name" href="#/artist/pressa">Pressa</a>
             <p class="dig__sub mono" aria-live="polite">Tough Decisions — preview</p>
             <div class="dig__controls">
@@ -141,7 +153,7 @@
         </div>
         <div class="services__grid">
           <div class="services__sticky" aria-hidden="true">
-            <img class="services__ring" src="media/brand/ring.webp" alt="" width="900" height="870" />
+            <img class="services__ring" src="media/brand/ring.webp" alt="" width="900" height="870" loading="lazy" decoding="async" />
           </div>
           <ol class="services__list"></ol>
         </div>
@@ -187,6 +199,17 @@
     </main>
 
     <!-- Artist page (route: #/artist/slug) -->
+    <!-- Mini player: shows while a record plays and the turntable is off screen -->
+    <div class="mini" role="region" aria-label="Now playing" inert>
+      <button class="mini__open" type="button" aria-label="Back to the turntable">
+        <span class="mini__disc"><img src="" alt="" /></span>
+        <span class="mini__text"><b class="mini__name"></b><span class="mini__track mono"></span></span>
+      </button>
+      <button class="mini__btn" type="button" aria-label="Pause">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path class="i-play" d="M8 5.5v13l11-6.5z" fill="currentColor"/><path class="i-pause" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg>
+      </button>
+    </div>
+
     <!-- data-lenis-prevent: the page smooth-scroll is paused while this is open and must not swallow its scroll -->
     <div class="artist" role="dialog" aria-modal="true" aria-label="Artist" data-lenis-prevent hidden></div>
 
