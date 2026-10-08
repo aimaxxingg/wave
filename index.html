@@ -22,8 +22,8 @@
     <!-- only the poster this screen will use (phones get the 9:16 one) -->
     <link rel="preload" as="image" href="media/video/reel-poster.webp" media="(min-aspect-ratio: 4/5)" />
     <link rel="preload" as="image" href="media/video/reel-mobile-poster.webp" media="(max-aspect-ratio: 4/5)" />
-    <script type="module" crossorigin src="./assets/index-a_2XSqx5.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Dm9Wou_t.css">
+    <script type="module" crossorigin src="./assets/index-BU0JCojJ.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DcUqve42.css">
   </head>
   <body class="is-loading">
     <!-- Loader -->
@@ -124,9 +124,11 @@
             aria-label="Record crate. Use the arrow keys to flip through, Enter to play."
           >
             <div class="dig__world">
-              <div class="dig__crate-g" data-cursor="Drag · Tap to play"></div>
+              <div class="dig__crate-g"></div>
               <div class="dig__deck-g" data-cursor="Play / Pause"></div>
             </div>
+            <!-- flat grab area over the crate: any swipe that starts here digs instead of scrolling -->
+            <i class="dig__hit" data-cursor="Drag · Tap to play" aria-hidden="true"></i>
           </div>
           <div class="dig__hud">
             <p class="dig__meta mono"><span class="dig__count">01 / 17</span><span class="dig__eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="dig__status">Drag the crate to dig</span></p>
