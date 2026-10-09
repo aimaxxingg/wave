@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wave Foundation — Artist Management & Creative</title>
+    <meta
+      name="description"
+      content="Wave Foundation is a music management and creative company. We manage, build and grow artists — Pressa, Bundog, Nina Woods, Pouria K and Mersad."
+    />
+    <meta name="theme-color" content="#0b0b0b" />
+    <meta property="og:title" content="Wave Foundation" />
+    <meta property="og:description" content="Every wave needs something solid behind it." />
+    <meta property="og:image" content="media/video/reel-poster.jpg" />
+    <link rel="icon" type="image/png" href="media/brand/wave.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- only the poster this screen will use (phones get the 9:16 one) -->
+    <link rel="preload" as="image" href="media/video/reel-poster.webp" media="(min-aspect-ratio: 4/5)" />
+    <link rel="preload" as="image" href="media/video/reel-mobile-poster.webp" media="(max-aspect-ratio: 4/5)" />
+    <script type="module" crossorigin src="./assets/index-C4pJkRkT.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BXAd_y-Q.css">
+  </head>
+  <body class="is-loading">
+    <!-- Loader -->
+    <div class="loader" aria-hidden="true">
+      <div class="loader__mark">
+        <span class="wave-mark loader__ghost"></span>
+        <span class="wave-mark loader__fill"></span>
+      </div>
+      <div class="loader__meta mono">
+        <span>Wave Foundation</span>
+        <span class="loader__pct">000</span>
+      </div>
+    </div>
+
+    <!-- Persistent video stage behind hero + roster -->
+    <div class="stage" aria-hidden="true">
+      <video class="stage__video stage__reel is-active" muted loop playsinline preload="auto"></video>
+      <div class="stage__loops"></div>
+      <div class="stage__shade"></div>
+    </div>
+
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__label"></span></div>
+
+    <header class="nav">
+      <a class="nav__logo" href="#top" aria-label="Wave Foundation — back to top">
+        <span class="wave-mark"></span>
+      </a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="#roster" data-scramble>Roster</a>
+        <a href="#work" data-scramble>Releases</a>
+        <a href="#services" data-scramble>About us</a>
+        <a href="#contact" data-scramble>Contact</a>
+      </nav>
+      <button class="nav__menu mono" aria-expanded="false" aria-controls="menu">
+        <span class="nav__menu-label">Menu</span><span class="nav__menu-icon" aria-hidden="true"><i></i><i></i></span>
+      </button>
+    </header>
+
+    <!-- mobile menu: a curtain that drops from the top, rows like the roster, the chrome ring turning behind -->
+    <div class="menu" id="menu" data-lenis-prevent hidden>
+      <img class="menu__ring" src="media/brand/ring.webp" alt="" width="900" height="870" loading="lazy" decoding="async" />
+      <nav class="menu__nav" aria-label="Mobile">
+        <a href="#roster"><span class="menu__idx mono">01</span><span class="menu__word"><span>Artists</span></span><span class="menu__hint mono" data-artist-count>Artists</span></a>
+        <a href="#work"><span class="menu__idx mono">02</span><span class="menu__word"><span>Releases</span></span><span class="menu__hint mono">Pull a record</span></a>
+        <a href="#services"><span class="menu__idx mono">03</span><span class="menu__word"><span>About us</span></span><span class="menu__hint mono">Since 2021</span></a>
+        <a href="#contact"><span class="menu__idx mono">04</span><span class="menu__word"><span>Contact</span></span><span class="menu__hint mono">Say hello</span></a>
+      </nav>
+      <div class="menu__foot">
+        <a class="menu__mail" href="mailto:Info@wavefoundation.co">Info@wavefoundation.co <span aria-hidden="true">↗</span></a>
+        <ul class="menu__socials"></ul>
+      </div>
+    </div>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div class="hero__inner">
+          <p class="hero__kicker mono"><span>Artist management</span><span>&amp; creative</span><span>Est. 2021</span></p>
+          <h1 class="hero__title" aria-label="Wave Foundation">
+            <span class="hero__line"><span class="hero__word" data-split>Wave</span></span>
+            <span class="hero__line hero__line--r"><span class="hero__word" data-split>Foundation</span></span>
+          </h1>
+        </div>
+        <div class="hero__hud mono">
+          <span class="hud__scroll">Scroll</span>
+        </div>
+      </section>
+
+      <!-- ROSTER -->
+      <section class="roster" id="roster" aria-labelledby="roster-title">
+        <div class="section-head section-head--big">
+          <h2 id="roster-title">Artists</h2>
+        </div>
+        <ol class="roster__list"></ol>
+      </section>
+
+      <!-- RELEASES -->
+      <section class="work" id="work" aria-labelledby="work-title">
+        <div class="section-head section-head--big">
+          <h2 id="work-title">Releases</h2>
+        </div>
+        <div class="dig">
+          <span class="dig__probe" aria-hidden="true"></span>
+          <!-- room light: the current cover, blurred, tints the whole frame -->
+          <div class="dig__ambient" aria-hidden="true"><img alt="" /><img alt="" /></div>
+          <i class="dig__frame" aria-hidden="true"></i>
+          <div class="dig__head">
+            <h3 class="dig__title">Pull a record.<br /><span>Drop the needle.</span></h3>
+            <p class="dig__tag mono">
+              <span class="dig__onair"><i></i>On air</span>
+            </p>
+          </div>
+          <div
+            class="dig__stage"
+            tabindex="0"
+            role="group"
+            aria-roledescription="record crate and turntable"
+            aria-label="Record crate. Use the arrow keys to flip through, Enter to play."
+          >
+            <div class="dig__world">
+              <div class="dig__crate-g"></div>
+              <div class="dig__deck-g" data-cursor="Play / Pause"></div>
+            </div>
+            <!-- flat grab area over the crate: any swipe that starts here digs instead of scrolling -->
+            <i class="dig__hit" data-cursor="Drag · Hold to carry" aria-hidden="true"></i>
+          </div>
+          <div class="dig__hud">
+            <p class="dig__meta mono"><span class="dig__eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></p>
+            <a class="dig__name" href="#/artist/pressa">Pressa</a>
+            <p class="dig__sub mono" aria-live="polite">Tough Decisions</p>
+            <div class="dig__controls">
+              <button class="dig__btn" type="button" data-dir="-1" aria-label="Previous record"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+              <button class="dig__btn dig__btn--play" type="button" aria-label="Play">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path class="i-play" d="M8 5.5v13l11-6.5z" fill="currentColor"/><path class="i-pause" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg>
+              </button>
+              <button class="dig__btn" type="button" data-dir="1" aria-label="Next record"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+            </div>
+            <div class="dig__bar" aria-hidden="true"><span></span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="services" id="services" aria-labelledby="services-title">
+        <div class="section-head section-head--big">
+          <h2 id="services-title">About us</h2>
+        </div>
+        <div class="services__grid">
+          <div class="services__sticky" aria-hidden="true">
+            <img class="services__ring" src="media/brand/ring.webp" alt="" width="900" height="870" loading="lazy" decoding="async" />
+          </div>
+          <div class="about__text"></div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <footer class="contact" id="contact" aria-labelledby="contact-title">
+        <canvas class="contact__field" aria-hidden="true"></canvas>
+        <div class="section-head section-head--big">
+          <h2 id="contact-title">Contact us</h2>
+        </div>
+        <p class="contact__hint mono">Move your cursor — make some waves.</p>
+        <div class="contact__mailbox">
+          <!-- the mascot walks along the pill's edge and types the address (src/typist.js) -->
+          <canvas class="contact__walker" aria-hidden="true"></canvas>
+          <a class="contact__mail" href="mailto:Info@wavefoundation.co" aria-label="Email Info@wavefoundation.co" data-cursor="Email us">
+            <span class="contact__mail-text"><span class="contact__typed">Info@wavefoundation.co</span><span class="contact__caret" aria-hidden="true"></span></span>
+            <span class="contact__mail-arrow" aria-hidden="true">↗</span>
+          </a>
+          <button class="contact__copy mono" type="button">Copy email</button>
+        </div>
+        <div class="contact__grid">
+          <div class="contact__cell">
+            <p class="mono">Follow us</p>
+            <ul class="contact__socials"></ul>
+          </div>
+          <div class="contact__cell">
+            <p class="mono">Local time</p>
+            <ul class="clocks"></ul>
+          </div>
+        </div>
+        <img class="contact__wordmark" src="media/brand/wordmark-chrome.webp" alt="Wave Foundation" width="1600" height="498" loading="lazy" />
+        <div class="contact__legal mono">
+          <span>© <span class="year">2026</span> Wave Foundation</span>
+          <a class="site-by" href="https://oiviid.com" target="_blank" rel="noopener">Site by <u>oiviid</u></a>
+          <a href="#top">Back to top ↑</a>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Artist page (route: #/artist/slug) -->
+
+    <!-- data-lenis-prevent: the page smooth-scroll is paused while this is open and must not swallow its scroll -->
+    <div class="artist" role="dialog" aria-modal="true" aria-label="Artist" data-lenis-prevent hidden></div>
+
+  </body>
+</html>
