@@ -6,7 +6,7 @@
     <title>Wave Foundation — Artist Management & Creative</title>
     <meta
       name="description"
-      content="Wave Foundation is a music management and creative company. We manage, build and grow artists — Pressa, Bundog, Nina Woods, Pouria K and Mersad."
+      content="Wave Foundation is a music management and creative company. We manage, build and grow artists — Pressa, Bundog, Nina Woods, Pouria K, Mersad and Strick."
     />
     <meta name="theme-color" content="#0b0b0b" />
     <meta property="og:title" content="Wave Foundation" />
@@ -22,8 +22,8 @@
     <!-- only the poster this screen will use (phones get the 9:16 one) -->
     <link rel="preload" as="image" href="media/video/reel-poster.webp" media="(min-aspect-ratio: 4/5)" />
     <link rel="preload" as="image" href="media/video/reel-mobile-poster.webp" media="(max-aspect-ratio: 4/5)" />
-    <script type="module" crossorigin src="./assets/index-q5djwNou.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BXAd_y-Q.css">
+    <script type="module" crossorigin src="./assets/index-C9VrSBI0.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-ptXg4hur.css">
   </head>
   <body class="is-loading">
     <!-- Loader -->
@@ -56,6 +56,7 @@
         <a href="#roster" data-scramble>Roster</a>
         <a href="#work" data-scramble>Releases</a>
         <a href="#services" data-scramble>About us</a>
+        <a href="#hall" data-scramble>Hall of Wave</a>
         <a href="#contact" data-scramble>Contact</a>
       </nav>
       <button class="nav__menu mono" aria-expanded="false" aria-controls="menu">
@@ -70,7 +71,8 @@
         <a href="#roster"><span class="menu__idx mono">01</span><span class="menu__word"><span>Artists</span></span><span class="menu__hint mono" data-artist-count>Artists</span></a>
         <a href="#work"><span class="menu__idx mono">02</span><span class="menu__word"><span>Releases</span></span><span class="menu__hint mono">Pull a record</span></a>
         <a href="#services"><span class="menu__idx mono">03</span><span class="menu__word"><span>About us</span></span><span class="menu__hint mono">Since 2021</span></a>
-        <a href="#contact"><span class="menu__idx mono">04</span><span class="menu__word"><span>Contact</span></span><span class="menu__hint mono">Say hello</span></a>
+        <a href="#hall"><span class="menu__idx mono">04</span><span class="menu__word"><span>Hall of Wave</span></span><span class="menu__hint mono">Our work</span></a>
+        <a href="#contact"><span class="menu__idx mono">05</span><span class="menu__word"><span>Contact</span></span><span class="menu__hint mono">Say hello</span></a>
       </nav>
       <div class="menu__foot">
         <a class="menu__mail" href="mailto:Info@wavefoundation.co">Info@wavefoundation.co <span aria-hidden="true">↗</span></a>
@@ -157,6 +159,32 @@
             <img class="services__ring" src="media/brand/ring.webp" alt="" width="900" height="870" loading="lazy" decoding="async" />
           </div>
           <div class="about__text"></div>
+        </div>
+      </section>
+
+      <!-- HALL OF WAVE: a corridor of our creative work (src/hall.js) -->
+      <section class="hall" id="hall" aria-labelledby="hall-title">
+        <div class="section-head section-head--big">
+          <h2 id="hall-title">Hall of Wave</h2>
+        </div>
+        <p class="hall__lede">Lyric videos, cover art and stage visuals made by our creative team. Walk the hall, and open any frame.</p>
+        <div class="hall__stage">
+          <div class="hall__world"></div>
+          <i class="hall__vignette" aria-hidden="true"></i>
+          <div class="hall__hud">
+            <button class="hall__hint mono" type="button">Scroll to walk the hall <span aria-hidden="true">↓</span></button>
+            <div class="hall__now" aria-live="polite">
+              <p class="hall__idx mono"></p>
+              <h3 class="hall__name"></h3>
+              <p class="hall__by mono"></p>
+            </div>
+            <div class="hall__ctrl">
+              <button class="hall__step hall__prev" type="button" aria-label="Previous piece">←</button>
+              <button class="pill hall__open" type="button">View</button>
+              <button class="hall__step hall__next" type="button" aria-label="Next piece">→</button>
+            </div>
+            <div class="hall__bar" aria-hidden="true"><span></span></div>
+          </div>
         </div>
       </section>
 
