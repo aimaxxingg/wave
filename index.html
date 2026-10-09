@@ -22,8 +22,8 @@
     <!-- only the poster this screen will use (phones get the 9:16 one) -->
     <link rel="preload" as="image" href="media/video/reel-poster.webp" media="(min-aspect-ratio: 4/5)" />
     <link rel="preload" as="image" href="media/video/reel-mobile-poster.webp" media="(max-aspect-ratio: 4/5)" />
-    <script type="module" crossorigin src="./assets/index-B1uW9M2p.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BNsc6Q-c.css">
+    <script type="module" crossorigin src="./assets/index-C2P-sDJ0.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BIoNzloa.css">
   </head>
   <body class="is-loading">
     <!-- Loader -->
@@ -167,21 +167,25 @@
         <div class="section-head section-head--big">
           <h2 id="hall-title">Hall of Wave</h2>
         </div>
-        <p class="hall__lede">Lyric videos, cover art and stage visuals made by our creative team. Walk the hall, and open any frame.</p>
+        <p class="hall__lede">Lyric videos, cover art and stage visuals made by our creative team. Walk the hall with the joystick, and open any frame.</p>
         <div class="hall__stage">
           <div class="hall__world"></div>
           <i class="hall__vignette" aria-hidden="true"></i>
           <div class="hall__hud">
-            <button class="hall__hint mono" type="button">Scroll to walk the hall <span aria-hidden="true">↓</span></button>
             <div class="hall__now" aria-live="polite">
               <p class="hall__idx mono"></p>
               <h3 class="hall__name"></h3>
               <p class="hall__by mono"></p>
             </div>
+            <!-- the mini joystick: drag the knob up / down to walk, or tap the arrows -->
+            <div class="hall__stick" role="group" aria-label="Walk the hall">
+              <button class="hall__walk" type="button" data-walk="1" aria-label="Walk to the next piece"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 15l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></button>
+              <button class="hall__knob" type="button" aria-label="Joystick: drag up to walk in, down to walk back. Arrow keys step"></button>
+              <button class="hall__walk" type="button" data-walk="-1" aria-label="Walk back to the previous piece"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 9l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></button>
+              <span class="hall__hint mono" aria-hidden="true">Drag to walk</span>
+            </div>
             <div class="hall__ctrl">
-              <button class="hall__step hall__prev" type="button" aria-label="Previous piece">←</button>
               <button class="pill hall__open" type="button">View</button>
-              <button class="hall__step hall__next" type="button" aria-label="Next piece">→</button>
             </div>
             <div class="hall__bar" aria-hidden="true"><span></span></div>
           </div>
@@ -227,6 +231,6 @@
 
     <!-- data-lenis-prevent: the page smooth-scroll is paused while this is open and must not swallow its scroll -->
     <div class="artist" role="dialog" aria-modal="true" aria-label="Artist" data-lenis-prevent hidden></div>
-
+
   </body>
 </html>
