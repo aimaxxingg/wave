@@ -22,8 +22,8 @@
     <!-- only the poster this screen will use (phones get the 9:16 one) -->
     <link rel="preload" as="image" href="media/video/reel-poster.webp" media="(min-aspect-ratio: 4/5)" />
     <link rel="preload" as="image" href="media/video/reel-mobile-poster.webp" media="(max-aspect-ratio: 4/5)" />
-    <script type="module" crossorigin src="./assets/index-BgoXq8S6.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CvdExiLD.css">
+    <script type="module" crossorigin src="./assets/index-D9-cu1op.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-znDHgNZC.css">
   </head>
   <body class="is-loading">
     <!-- Loader -->
@@ -53,7 +53,7 @@
         <span class="wave-mark"></span>
       </a>
       <nav class="nav__links" aria-label="Main">
-        <a href="#roster" data-scramble>Roster</a>
+        <a href="#roster" data-scramble>Artists</a>
         <a href="#work" data-scramble>Releases</a>
         <a href="#services" data-scramble>About us</a>
         <a href="#hall" data-scramble>Hall of Wave</a>
@@ -167,7 +167,7 @@
         <div class="section-head section-head--big">
           <h2 id="hall-title">Hall of Wave</h2>
         </div>
-        <p class="hall__lede">Lyric videos, cover art and stage visuals made by our creative team. Walk the hall with the joystick, and open any frame.</p>
+        <p class="hall__lede">The visuals behind the sound. A showcase of what we’ve created for artists, brands, and the people who move culture.</p>
         <div class="hall__stage">
           <div class="hall__world"></div>
           <i class="hall__vignette" aria-hidden="true"></i>
@@ -198,7 +198,6 @@
         <div class="section-head section-head--big">
           <h2 id="contact-title">Contact us</h2>
         </div>
-        <p class="contact__hint mono">Move your cursor — make some waves.</p>
         <div class="contact__mailbox">
           <!-- the mascot walks along the pill's edge and types the address (src/typist.js) -->
           <canvas class="contact__walker" aria-hidden="true"></canvas>
@@ -208,17 +207,18 @@
           </a>
           <button class="contact__copy mono" type="button">Copy email</button>
         </div>
-        <div class="contact__grid">
-          <div class="contact__cell">
-            <p class="mono">Follow us</p>
-            <ul class="contact__socials"></ul>
-          </div>
-          <div class="contact__cell">
+        <div class="contact__follow">
+          <p class="mono">Follow us</p>
+          <ul class="contact__socials"></ul>
+        </div>
+        <!-- the wordmark, with the studios' local times stacked beside it -->
+        <div class="contact__base">
+          <img class="contact__wordmark" src="media/brand/wordmark-chrome.webp" alt="Wave Foundation" width="1600" height="498" loading="lazy" />
+          <div class="contact__time">
             <p class="mono">Local time</p>
             <ul class="clocks"></ul>
           </div>
         </div>
-        <img class="contact__wordmark" src="media/brand/wordmark-chrome.webp" alt="Wave Foundation" width="1600" height="498" loading="lazy" />
         <div class="contact__legal mono">
           <span>© <span class="year">2026</span> Wave Foundation</span>
           <a class="site-by" href="https://oiviid.com" target="_blank" rel="noopener">Site by <u>oiviid</u></a>
@@ -231,6 +231,6 @@
 
     <!-- data-lenis-prevent: the page smooth-scroll is paused while this is open and must not swallow its scroll -->
     <div class="artist" role="dialog" aria-modal="true" aria-label="Artist" data-lenis-prevent hidden></div>
-
+
   </body>
 </html>
