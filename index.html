@@ -19,7 +19,7 @@
     <!-- only the poster this screen will use (phones get the 9:16 one) -->
     <link rel="preload" as="image" href="media/video/reel-poster.webp" media="(min-aspect-ratio: 4/5)" />
     <link rel="preload" as="image" href="media/video/reel-mobile-poster.webp" media="(max-aspect-ratio: 4/5)" />
-    <script type="module" crossorigin src="./assets/index-BRY6Orpl.js"></script>
+    <script type="module" crossorigin src="./assets/index-DuCRxPFn.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-D1VliPju.css">
   </head>
   <body class="is-loading">
@@ -123,9 +123,10 @@
             aria-roledescription="record crate and turntable"
             aria-label="Record crate. Use the arrow keys to flip through, Enter to play."
           >
+            <!-- the studio around them, a 3D scene of its own under the same camera: drawn as one layer behind the crate
+                 and the turntable (inside their scene, Safari sorted the big floor in front of the crate) -->
+            <div class="dig__world dig__world--room" aria-hidden="true"><div class="dig__room-g"></div></div>
             <div class="dig__world">
-              <!-- the listening room around them: a wooden floor, a rug, walls with shelves of records -->
-              <div class="dig__room-g" aria-hidden="true"></div>
               <div class="dig__crate-g"></div>
               <div class="dig__deck-g" data-cursor="Play / Pause"></div>
             </div>
