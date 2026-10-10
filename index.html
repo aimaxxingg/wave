@@ -13,17 +13,14 @@
     <meta property="og:description" content="Every wave needs something solid behind it." />
     <meta property="og:image" content="media/video/reel-poster.jpg" />
     <link rel="icon" type="image/png" href="media/brand/wave.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <!-- the two fonts every screen uses, fetched alongside the stylesheet instead of after it (see @font-face in styles.css) -->
+    <link rel="preload" as="font" type="font/woff2" href="./assets/archivo-latin-DY7AcnAa.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="./assets/jetbrains-mono-latin-Bv3UJDIO.woff2" crossorigin />
     <!-- only the poster this screen will use (phones get the 9:16 one) -->
     <link rel="preload" as="image" href="media/video/reel-poster.webp" media="(min-aspect-ratio: 4/5)" />
     <link rel="preload" as="image" href="media/video/reel-mobile-poster.webp" media="(max-aspect-ratio: 4/5)" />
-    <script type="module" crossorigin src="./assets/index-CSxVVqzn.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Ddjj0vn8.css">
+    <script type="module" crossorigin src="./assets/index-CLQ4iDzg.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-mcaRC0Eh.css">
   </head>
   <body class="is-loading">
     <!-- Loader -->
