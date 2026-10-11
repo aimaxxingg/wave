@@ -19,8 +19,8 @@
     <!-- only the poster this screen will use (phones get the 9:16 one) -->
     <link rel="preload" as="image" href="media/video/reel-poster.webp" media="(min-aspect-ratio: 4/5)" />
     <link rel="preload" as="image" href="media/video/reel-mobile-poster.webp" media="(max-aspect-ratio: 4/5)" />
-    <script type="module" crossorigin src="./assets/index-DzX7nEdt.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-AgwPFcvP.css">
+    <script type="module" crossorigin src="./assets/index-MfCJOYc2.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-COZ3jamJ.css">
   </head>
   <body class="is-loading">
     <!-- Loader -->
@@ -109,6 +109,8 @@
           <span class="dig__probe" aria-hidden="true"></span>
           <!-- room light: the current cover, blurred, tints the whole frame -->
           <div class="dig__ambient" aria-hidden="true"><img alt="" /><img alt="" /></div>
+          <!-- the record shop around the turntable and the crate (shop.js draws it with three.js) -->
+          <canvas class="dig__shop" aria-hidden="true"></canvas>
           <i class="dig__frame" aria-hidden="true"></i>
           <div class="dig__head">
             <h3 class="dig__title">Pull a record.<br /><span>Drop the needle.</span></h3>
@@ -123,9 +125,6 @@
             aria-roledescription="record crate and turntable"
             aria-label="Record crate. Use the arrow keys to flip through, Enter to play."
           >
-            <!-- the studio around them, a 3D scene of its own under the same camera: drawn as one layer behind the crate
-                 and the turntable (inside their scene, Safari sorted the big floor in front of the crate) -->
-            <div class="dig__world dig__world--room" aria-hidden="true"><div class="dig__room-g"></div></div>
             <div class="dig__world">
               <div class="dig__crate-g"></div>
               <div class="dig__deck-g" data-cursor="Play / Pause"></div>
@@ -231,6 +230,6 @@
 
     <!-- data-lenis-prevent: the page smooth-scroll is paused while this is open and must not swallow its scroll -->
     <div class="artist" role="dialog" aria-modal="true" aria-label="Artist" data-lenis-prevent hidden></div>
-
+
   </body>
 </html>
